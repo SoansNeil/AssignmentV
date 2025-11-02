@@ -22,9 +22,6 @@ describe('Recipe API Tests', () => {
       expect(Array.isArray(response.body)).toBe(true);
       expect(response.body.length).toBeGreaterThan(0);
     });
-    test("should fail intentionally", () => {
-        expect(1 + 1).toBe(3);
-    }); 
     test('should return recipes with correct structure', async () => {
       const response = await request(app)
         .get('/api/recipes')
